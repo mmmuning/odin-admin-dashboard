@@ -3,7 +3,7 @@
     --secondary-color: #ffce00;
     --bg-color: #e2e8f0;
     --card-color: #ffffff;
-    --subtext-color: #757575;
+    --grey-color: #757575;
 }
 
 @font-face {
@@ -16,14 +16,23 @@ html {
     font-family: system-ui, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 62.5%;
     background-color: var(--bg-color);
-    min-height: 100vh;
+    height: 100%;
     margin: 0;
 }
 
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
 .container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 header {
@@ -34,6 +43,7 @@ header {
     grid-template-columns: auto-fit;
     grid-template-rows: 1fr 2fr;
     padding: 0 3rem;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.178);
 }
 
 header > div:first-child {
@@ -120,7 +130,7 @@ header > div:last-child {
 
 .content {
     font-size: 2rem;
-    padding: 0 3rem;
+    padding: 0 0 3rem 3rem;
 }
 
 .cards-container {
@@ -130,11 +140,11 @@ header > div:last-child {
 
 .project-card {
     background-color: var(--card-color);
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.178);
     padding: 3rem;
     margin: 0 2rem 2rem 0;
     border-radius: 1.5rem;
     border-left: 1rem solid var(--secondary-color);
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,26 +162,81 @@ header > div:last-child {
 }
 
 .project-card > div > p {
-    color: var(--subtext-color)
+    color: var(--grey-color)
 }
 
 .project-card > div > button {
     border: none;
     background-color: transparent;
-    cursor: pointer;
-}
-
-.project-card > div > button:hover {
-    opacity: 0.5;
 }
 
 aside {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
 }
 
 .announcements {
     font-size: 2rem;
 }
 
+.announcements > div {
+    background-color: var(--card-color);
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.178);
+    margin-right: 3rem;
+    border-radius: 1.5rem;
+}
+
+.announcements div {
+    border-bottom: 1px solid var(--grey-color);
+    padding: 1.5rem;
+}
+
+.announcements div:last-child {
+    border: none;
+}
+
+.announcements h5,
+.announcements p {
+    margin: 0 0 0.5rem 0;
+}
+
+.announcements p {
+    font-size: 1.4rem;
+    color: var(--grey-color);
+}
+
+.trending {
+    font-size: 2rem;
+}
+
+.trending > div {
+    background-color: var(--card-color);
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.178);
+    margin-right: 3rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.user-card {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+    justify-content: left;
+    align-items: center;
+}
+
+.user-card div p {
+    margin: 0;
+}
+
+.user-card div p:first-child{
+    font-weight: 500;
+}
+
+.user-card div p:last-child{
+    color: var(--grey-color);
+}
 
