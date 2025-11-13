@@ -116,9 +116,41 @@ header > div:last-child {
 }
 
 .sidebar {
+    font-size: 1.6rem;
+    font-weight: 500;
     background-color: var(--primary-color);
+    color: white;
     grid-column: 1;
     grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+}
+
+.sidebar ul li {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: left;
+    align-items: center;
+}
+
+.sidebar ul li {
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  height: 5rem;
+}
+
+.sidebar ul li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
 }
 
 .main {
