@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #1992d4;
+    --secondary-color: #f0b429;
+    --bg-color: #e2e8f0;
+    --card-color: #ffffff;
+}
+
+body, 
+html {
+    min-height: 100vh;
+}
