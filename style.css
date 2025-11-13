@@ -1,15 +1,64 @@
 :root {
-    --primary-color: #1992d4;
-    --secondary-color: #f0b429;
+    --primary-color: #7584f2;
+    --secondary-color: #ffce00;
     --bg-color: #e2e8f0;
     --card-color: #ffffff;
 }
 
-body, 
-html {
-    min-height: 100vh;
+@font-face {
+  font-family: Roboto;
+  src: url(assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
-.dashboard-icon {
-    fill: red;
+body, 
+html {
+    font-family: system-ui, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 62.5%;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+header {
+    background-color: var(--card-color);
+    grid-column: 2 / -1;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-columns: auto-fit;
+    grid-template-rows: 1fr 2fr;
+}
+
+header > div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.user-photo {
+    padding: 0.5rem;
+}
+
+.user-menu p {
+    font-size: 2rem;
+}
+
+.sidebar {
+    background-color: var(--primary-color);
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.main {
+    grid-column: 2 / -1;
+    grid-row: 2;
 }
