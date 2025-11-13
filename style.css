@@ -3,6 +3,7 @@
     --secondary-color: #ffce00;
     --bg-color: #e2e8f0;
     --card-color: #ffffff;
+    --subtext-color: #757575;
 }
 
 @font-face {
@@ -113,4 +114,64 @@ header > div:last-child {
 .main {
     grid-column: 2 / -1;
     grid-row: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
+
+.content {
+    font-size: 2rem;
+    padding: 0 3rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.project-card {
+    background-color: var(--card-color);
+    padding: 3rem;
+    margin: 0 2rem 2rem 0;
+    border-radius: 1.5rem;
+    border-left: 1rem solid var(--secondary-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card > div:last-child {
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+}
+
+.project-card > div > h4,
+.project-card > div > p {
+    margin: 0 0 0.5rem 0;
+}
+
+.project-card > div > p {
+    color: var(--subtext-color)
+}
+
+.project-card > div > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.project-card > div > button:hover {
+    opacity: 0.5;
+}
+
+aside {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.announcements {
+    font-size: 2rem;
+}
+
+
